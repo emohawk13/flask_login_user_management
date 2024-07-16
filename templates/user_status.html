@@ -1,0 +1,46 @@
+<!-- users.html -->
+{% extends 'index.html' %}
+
+{% block content %}
+<div class="nav">
+    <h2 class="info">Welcome {{ full_name }}<br></h1>
+        <div class="nav-items">
+            {% if current_user.is_authenticated and current_user.role == 'admin' %}
+            <a href="/users" role="button">User Management</a>
+            {% endif %}
+            <a href="/home">Home</a>
+            <a href="/logout" role="button">Logout</a>
+        </div>
+</div>
+<div>
+    <div class="form-containers">
+        <h1>User Status Update</h1>
+        <form action="/user_status" method="POST">
+            <h4>Choose one or more fields to search a user.</h4>
+            <div class="form-group">
+                <input type="text" id="username" name="username" placeholder="Username" class="form-contents">
+                <input type="email" id="email" name="email" placeholder="Email" class="form-contents">
+                <input type="text" id="f_name" name="f_name" placeholder="First Name" class="form-contents">
+                <input type="text" id="l_name" name="l_name" placeholder="Last Name" class="form-contents">
+            </div>
+            <div>
+                <h4>Select an option to change below:</h4>
+                <div class="form-group">
+                    <label for="status" class="form-label-start">Role:</label>
+                    <select id="status" name="status" class="form-contents">
+                        <option value="user">User</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                    <label for="action">Status:</label>
+                    <select id="action" name="action" class="form-contents">
+                        <option value="activate">Activate</option>
+                        <option value="deactivate">Deactivate</option>
+                    </select>
+                </div>
+            </div>
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

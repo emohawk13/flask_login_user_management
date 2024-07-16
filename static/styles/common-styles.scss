@@ -1,0 +1,241 @@
+@import "colors.scss";
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: $background-color-primary;
+}
+
+.nav {
+  background-color: $nav-background-color;
+  color: $text-color-1;
+  padding: 10px 20px;
+  .info {
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .nav-items {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    a {
+      padding: 1% 2%;
+      color: $text-color-1;
+      text-decoration: none;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+  }
+}
+
+.login-containers {
+  display: flex;
+  height: 100vh;
+
+  .left {
+    background-image: url(https://images.unsplash.com/photo-1489389944381-3471b5b30f04?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 50%;
+    height: 100vh;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    flex: 1;
+  }
+  .login-container {
+    padding: 25% 10%;
+    height: 35vh;
+    width: 35vw;
+
+    h1 {
+      font-family: "Roboto", sans-serif;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .form-group {
+      width: 90%;
+      border: 1px solid $border-color-1;
+      padding: 10%;
+      border-radius: 5px;
+      background-color: $form-background-color;
+
+      input[type="email"],
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid $border-color-1;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      .button-group {
+        display: flex;
+        flex-direction: row;
+        padding: 2%;
+        .standard-button {
+          width: 90%;
+          border: none;
+          border-radius: 5px;
+          background-color: $button-background-color;
+          color: $text-color-1;
+          cursor: pointer;
+          transition: background-color 0.3s;
+
+          &:hover {
+            background-color: $button-background-color-2;
+          }
+        }
+        a {
+          padding: 5px;
+          width: 100%;
+          text-align: center;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.side-by-side-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: auto;
+  margin: 4%;
+
+  .container {
+    flex: 1;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+    padding: 4%;
+    width: 70%;
+    min-height: 500px;
+
+    .contents {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      strong {
+        padding-top: 3px;
+      }
+    }
+  }
+}
+
+.form-containers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin: 4%;
+  border: 1px solid black;
+  border-radius: 20px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+  padding: 4%;
+  height: auto;
+
+  .form-group {
+    padding-bottom: 2%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1%;
+    font-size: 1.25rem;
+    .form-contents {
+      padding: 2%;
+      margin: 2% 1%;
+    }
+    .form-options {
+      padding: 2%;
+      margin-bottom: 15%;
+    }
+    .form-label-start {
+      margin-top: 2%;
+    }
+  }
+  .submit-button {
+    padding: 2%;
+    margin-top: 4%;
+    width: 100%;
+    background-color: $button-background-color;
+    border: none;
+    &:hover {
+      background-color: $button-background-color-2;
+    }
+  }
+}
+
+.sign-up-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin: 4%;
+  border: 1px solid black;
+  border-radius: 20px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+  padding: 4%;
+  height: auto;
+
+  .sign-up-form {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    width: 100%;
+
+    .sign-up-contents {
+      margin: 2% 1%;
+      padding: 1%;
+    }
+    .button-group {
+      display: grid;
+      .submit-button {
+        padding: 2%;
+        margin-top: 4%;
+        width: 100%;
+        color: $text-color-1;
+        background-color: $button-background-color;
+        border: none;
+        &:hover {
+          background-color: $button-background-color-2;
+        }
+      }
+      .login-button {
+        text-decoration: none;
+        color: $text-color-1;
+        text-align: center;
+        background-color: $button-background-color;
+        width: 99%;
+        padding: 1%;
+        margin-top: 4%;
+      }
+    }
+  }
+}
+
+.dashboard{
+  margin: 1% 3%;
+  .container{
+    flex: 1;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+    padding: 4%;
+    width: 90%;
+    min-height: auto;
+    margin-bottom: 2%;
+  }
+}

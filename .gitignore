@@ -1,0 +1,5 @@
+instance/
+__pycache__
+.vscode
+static/styles/*.map*
+static/styles/*.css*

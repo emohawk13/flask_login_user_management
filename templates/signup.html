@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+{% block content %}
+
+<div class="sign-up-container">
+    <h1 class="h1">Signup Form</h1>
+    <form action="/signup" method="POST">
+        <div class="sign-up-form">
+            <input type="text" name="f_name" placeholder="First Name" class="sign-up-contents">
+            <input type="text" name="l_name" placeholder="Last Name" class="sign-up-contents">
+            <input type="email" name="email" placeholder="Email" class="sign-up-contents">
+            <input type="text" name="username" placeholder="Username" class="sign-up-contents">
+            <input type="password" name="password" placeholder="Password" class="sign-up-contents">
+        </div>
+        <div class="sign-up-form">
+            <div class="button-group">
+                <button type="submit" class="submit-button">Submit</button>
+                <a href="/login" class="login-button">Login</a>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

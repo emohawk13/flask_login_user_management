@@ -1,0 +1,47 @@
+{% extends 'index.html' %}
+{% block content %}
+<div class="nav">
+  <h2 class="info">Welcome {{ full_name }}<br></h1>
+    <div class="nav-items">
+      {% if current_user.is_authenticated and current_user.role == 'admin' %}
+      <a href="/users" role="button">User Management</a>
+      {% endif %}
+      <a href="/change_password" role="button">Change Password</a>
+      <a href="/logout" role="button">Logout</a>
+    </div>
+</div>
+<div class="dashboard">
+  <div class="container">
+    <h2>Topic</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat nulla modi atque, eveniet saepe quos omnis vitae delectus cumque voluptas illo minima libero in inventore voluptate nihil sit, non autem.
+      Dolor nemo in nulla debitis voluptatem quisquam, porro a exercitationem ut, id ipsam aperiam sint. Consequatur tempora est tempore, rerum ullam, libero repudiandae voluptatem vel, quos dolore laudantium obcaecati at!
+      Fuga laboriosam voluptate iusto? Obcaecati esse nemo adipisci porro, aliquid ut enim. Eveniet ipsum voluptas quos cum reiciendis dolorum quibusdam id facere doloribus, amet ad molestiae velit illum at a?
+      Nulla ut facere fugit tempore excepturi ex blanditiis corrupti ipsa, explicabo enim? Iste quisquam modi blanditiis, commodi, quidem dolor deserunt facilis laboriosam minus ea voluptates corrupti adipisci quis eius consequatur!
+      Facilis amet quasi veritatis, odio tempora eos ad non sapiente dolore. Accusamus veniam fugiat alias maxime tenetur ex iusto unde eum rem, ea provident ullam dolor ratione placeat atque nesciunt?</p>
+  </div>
+  <div class="container">
+    <h2>Topic</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat nulla modi atque, eveniet saepe quos omnis vitae delectus cumque voluptas illo minima libero in inventore voluptate nihil sit, non autem.
+      Dolor nemo in nulla debitis voluptatem quisquam, porro a exercitationem ut, id ipsam aperiam sint. Consequatur tempora est tempore, rerum ullam, libero repudiandae voluptatem vel, quos dolore laudantium obcaecati at!
+      Fuga laboriosam voluptate iusto? Obcaecati esse nemo adipisci porro, aliquid ut enim. Eveniet ipsum voluptas quos cum reiciendis dolorum quibusdam id facere doloribus, amet ad molestiae velit illum at a?
+      Nulla ut facere fugit tempore excepturi ex blanditiis corrupti ipsa, explicabo enim? Iste quisquam modi blanditiis, commodi, quidem dolor deserunt facilis laboriosam minus ea voluptates corrupti adipisci quis eius consequatur!
+      Facilis amet quasi veritatis, odio tempora eos ad non sapiente dolore. Accusamus veniam fugiat alias maxime tenetur ex iusto unde eum rem, ea provident ullam dolor ratione placeat atque nesciunt?</p>
+  </div>
+  <div class="container">
+    <h2>Topic</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat nulla modi atque, eveniet saepe quos omnis vitae delectus cumque voluptas illo minima libero in inventore voluptate nihil sit, non autem.
+      Dolor nemo in nulla debitis voluptatem quisquam, porro a exercitationem ut, id ipsam aperiam sint. Consequatur tempora est tempore, rerum ullam, libero repudiandae voluptatem vel, quos dolore laudantium obcaecati at!
+      Fuga laboriosam voluptate iusto? Obcaecati esse nemo adipisci porro, aliquid ut enim. Eveniet ipsum voluptas quos cum reiciendis dolorum quibusdam id facere doloribus, amet ad molestiae velit illum at a?
+      Nulla ut facere fugit tempore excepturi ex blanditiis corrupti ipsa, explicabo enim? Iste quisquam modi blanditiis, commodi, quidem dolor deserunt facilis laboriosam minus ea voluptates corrupti adipisci quis eius consequatur!
+      Facilis amet quasi veritatis, odio tempora eos ad non sapiente dolore. Accusamus veniam fugiat alias maxime tenetur ex iusto unde eum rem, ea provident ullam dolor ratione placeat atque nesciunt?</p>
+  </div>
+  <div class="container">
+    <h2>Topic</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat nulla modi atque, eveniet saepe quos omnis vitae delectus cumque voluptas illo minima libero in inventore voluptate nihil sit, non autem.
+      Dolor nemo in nulla debitis voluptatem quisquam, porro a exercitationem ut, id ipsam aperiam sint. Consequatur tempora est tempore, rerum ullam, libero repudiandae voluptatem vel, quos dolore laudantium obcaecati at!
+      Fuga laboriosam voluptate iusto? Obcaecati esse nemo adipisci porro, aliquid ut enim. Eveniet ipsum voluptas quos cum reiciendis dolorum quibusdam id facere doloribus, amet ad molestiae velit illum at a?
+      Nulla ut facere fugit tempore excepturi ex blanditiis corrupti ipsa, explicabo enim? Iste quisquam modi blanditiis, commodi, quidem dolor deserunt facilis laboriosam minus ea voluptates corrupti adipisci quis eius consequatur!
+      Facilis amet quasi veritatis, odio tempora eos ad non sapiente dolore. Accusamus veniam fugiat alias maxime tenetur ex iusto unde eum rem, ea provident ullam dolor ratione placeat atque nesciunt?</p>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,9 @@
+flask
+flask_sqlalchemy
+flask_login
+flask_scss
+bcrypt
+logging
+requests
+functools
+os

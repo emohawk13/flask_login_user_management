@@ -1,0 +1,47 @@
+<!-- users.html -->
+{% extends 'index.html' %}
+
+{% block content %}
+<div class="nav">
+    <h2 class="info">Welcome {{ full_name }}<br></h1>
+    <div class="nav-items">
+        {% if current_user.is_authenticated and current_user.role == 'admin' %}
+        <a href="/user_status" role="button">Edit a user</a>
+        <a href="/signup" role="button">Sign up a user</a>
+        {% endif %}
+        <a href="/home">Home</a>
+        <a href="/logout" role="button">Logout</a>
+    </div>
+</div>
+<div class="side-by-side-list">
+    <div class="container">
+        <h1>Active User List</h1>
+        <ol>
+            {% for user in active_users %}
+            <li class="contents">
+                <strong>User ID:</strong> {{ user.id }}<br>
+                <strong>Username:</strong> {{ user.username }}<br>
+                <strong>Name:</strong> {{ user.name }}<br>
+                <strong>User Role:</strong> {{ user.role }}
+            </li><br>
+            {% endfor %}
+        </ol>
+    </div>
+    {% if inactive_users %}
+    <div class="container">
+        <h1>Inactive User List</h1>
+        <ol>
+            {% for user in inactive_users %}
+            <li class="contents">
+                <strong>User ID:</strong> {{ user.id }}<br>
+                <strong>Username:</strong> {{ user.username }}<br>
+                <strong>Name:</strong> {{ user.name }}
+            </li><br>
+            {% endfor %}
+        </ol>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
+
+if a list is inactive make it not show up please
